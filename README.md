@@ -7,7 +7,7 @@ Discentes:
   - Giuseppe Baruffaldi Scassiotti - 2019004330
   - Ruan Marcos Balbino de Alcântara Pereira - 2019014766
 
-Doscente:
+Docente:
   - Otávio de Souza Martins Gomes
 
 # Como rodar
