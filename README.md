@@ -38,30 +38,11 @@ Para rodar no Linux:
 # Arquivo de entrada e saída
 
 Com o seguinte arquivo de entrada:
-```sh
-0 5 2
-0 2 3
-1 4 1
-3 3 4
-```
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/54671133/145308562-1e798f76-43f8-4a59-b3a5-5d121011a466.png" />
+</p>
+
 Foi obtido o seguinte arquivo de saída:
-
-```sh
-Tempo		P1	P2	P3	P4
-  - 1		##			--		
- 1- 2		##			--		
- 2- 3		##			--	--
- 3- 4		##			--	--
- 4- 5		##			--	--
- 5- 6						--	##
- 6- 7						--	##
- 7- 8						--	##
- 8- 9						##		
- 9-10						##		
-10-11						##		
-11-12						##		
-
-Tempo medio de vida = 6.00
-Tempo medio de espera = 2.00
-Numero de trocas de contexto = 3
-```
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/54671133/145308581-b2f918ac-cd71-4313-aaea-c4eaf1b2eb91.png" />
+</p>
