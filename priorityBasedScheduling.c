@@ -75,7 +75,7 @@ void selectionSort() {
     Process *pMin;
     // Ordem crescente de acordo com prioridade
 
-    Process *p = &processArray.processes[0];  // endereço do processo p
+    Process *p = &processArray.processes[0];  // Endereço do processo p
     min = 0;
     for (j = 1; j < processArray.numProcess; j++)
         if (processArray.processes[j].creationTime < processArray.processes[min].creationTime)
@@ -83,13 +83,14 @@ void selectionSort() {
         else if (processArray.processes[j].creationTime == processArray.processes[min].creationTime)
             if (processArray.processes[j].priority > processArray.processes[min].priority)
                 min = j;
-    pMin = &processArray.processes[min];  // endereço do processo min
+    pMin = &processArray.processes[min];  // Endereço do processo min
     Process aux;
-    aux = *p;               // aux rece valor do processo p
-    *p = *pMin;             // endereço de p recebe valor do processo min
-    *pMin = aux;            // endereço min recebe valor do processo aux
+    aux = *p;               // aux recebe valor do processo p
+    *p = *pMin;             // Endereço de p recebe valor do processo min
+    *pMin = aux;            // Endereço min recebe valor do processo aux
     pMin->waitingTime = 0;  // Tempo de espera para primeiro processo é nulo
     pMin->turnaroundTime = pMin->duration + pMin->waitingTime + pMin->creationTime;
+
     for (i = 1; i < processArray.numProcess; i++) {
         Process *ant = &processArray.processes[i - 1];
         int next = i;
@@ -102,8 +103,8 @@ void selectionSort() {
         Process *p = &processArray.processes[i];
         if (next != i) {
             Process *p2 = &processArray.processes[next];
-            aux = *p;  // aux rece valor do processo p
-            *p = *p2;  // endereço de p recebe valor do processo min
+            aux = *p;  // aux recebe valor do processo p
+            *p = *p2;  // Endereço de p recebe valor do processo min
             *p2 = aux;
         }
         p->waitingTime = ant->turnaroundTime - p->creationTime;
@@ -117,7 +118,6 @@ int averageWaitingTime() {
     float total = 0;
     int i, j;
     Process *processes = processArray.processes;
-    processes[0].waitingTime = 0;
 
     // Soma das durações para cálculo do tempo médio de espera
     for (i = 1; i < processArray.numProcess; i++)
@@ -155,11 +155,11 @@ void writeFile(float average_waiting_time, float average_turnaround_time) {
                 pos = j;
             }
         }
-        Process *p = &processArray.processes[i];  // endereço do processo p
+        Process *p = &processArray.processes[i];  // Endereço do processo p
         Process *p2 = &processArray.processes[pos];
         Process aux;
-        aux = *p;  // aux rece valor do processo p
-        *p = *p2;  // endereço de p recebe valor do processo min
+        aux = *p;  // aux recebe valor do processo p
+        *p = *p2;  // Endereço de p recebe valor do processo min
         *p2 = aux;
     }
 
@@ -194,6 +194,7 @@ void writeFile(float average_waiting_time, float average_turnaround_time) {
 
     fclose(output);
 }
+
 int main() {
     float average_waiting_time, average_turnaround_time;
     int i;
@@ -210,7 +211,7 @@ int main() {
     // Calcula o tempo médio de vida
     average_turnaround_time = averageTurnaroundTime();
 
-    // Escreve os resultados no arquivo de saídan
+    // Escreve os resultados no arquivo de saída
     writeFile(average_waiting_time, average_turnaround_time);
 
     return 0;
