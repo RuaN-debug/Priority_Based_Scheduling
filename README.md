@@ -1,6 +1,6 @@
 # Priority Based Scheduling
 
-Tabalho realizado para composição da nota 2 de Sistemas Operacionais (ECOS02), do curso de Engenharia da Computação na Universidade Federal de Itajubá.
+Trabalho realizado para composição da nota 2 de Sistemas Operacionais (ECOS02), do curso de Engenharia da Computação na Universidade Federal de Itajubá.
 
 Discentes: 
   - Ariadne Pereira da Silva Vieira - 2019004106
